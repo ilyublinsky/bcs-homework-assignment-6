@@ -15,6 +15,7 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+  <!--Jumbotron Header-->
   <header class="jumbotron jumbotron-fluid bg-dark btn-primary" >
     <div class="container">
       <h1 class="display-4"><b>Weather Dashboard</b></h1>
@@ -22,14 +23,14 @@
     </div>
   </div>
 </header>
-  <!--City Search Botton Fuction-->
+  <!--City Search Button Fuction-->
 <main class="flex-row justify-space-between">
   <div class="col-12 col-md-4">
     <div class="card">
       <h3 class="card-header text-uppercase">
       <nav class="navbar navbar-primary bg-dark">
       <a class="navbar-brand"><h3>
-      <i class="wi-forecast-io-thunderstorm: thunderstorm"></i>Weather Dashboard</h3></a>
+      <i class="wi-forecast-io-thunderstorm: thunderstorm"></i>Search by City</h3></a>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Enter City Here" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -37,21 +38,10 @@
     </nav>
   </div>
 <br>
-<!--Search By Weather Conditions-->
-<div class="card" id="weather conditions" class="card-body">
-  <h3 class="card-header text-uppercase">
-  <nav class="navbar navbar-expand-lg navbar-primary bg-dark">
-    <a class="navbar-brand">Search By Weather</h3></a>
-    <button weather-condition="temperature" class="btn btn-primary bg-dark">Temperature</button>
-    <button weather-condition="uvLight" class="btn btn-primary bg-dark">UV</button>
-    <button weather-condition="humiditiy" class="btn btn-primary bg-dark">Humidity</button>
-    <button weather-condition="wind" class="btn btn-primary bg-dark">Wind Speed</button>
-  </nav>
-</div>
   </div>
 </div>
 </div>
-<!--Results-->
+<!--Results Container-->
 <aside class="container-result-body" id="results" style="float: right; margin-right: 40%; margin-bottom: 180%;">
 <h2 class="subtitle">Results<span id="weather-search-option"></span></h2>
 <div id="results-container" class="list-group"></div>
@@ -59,7 +49,7 @@
 </aside>
 </main>
 
-  <script type="text/javascript" href="script.js"></script>
-  <script src="jquery-3.5.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" href="script.js"></script>
 </body>
 </html>
