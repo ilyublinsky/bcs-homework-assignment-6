@@ -1,4 +1,4 @@
-// Different ways to use the search option. //
+// Different ways to use the search option.
 var APIKEY = "5d5c7866dcc54075c141f06a9dea4f1b";
 var requestUrl = ('https://api.openweathermap.org/data/2.5/weather?id=');
 var city = $("");
