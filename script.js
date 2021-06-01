@@ -14,7 +14,7 @@ var weatherData;
         for (var i = 0; i < weatherData.length; i++) {
             var city = weatherData[i];
             var button = $("<button></button>");
-            button.addClass("btn btn-outline-light");
+            button.addClass("btn btn-outline-dark");
             button.text(city);
             $("#search").append(button);
         }
@@ -33,7 +33,7 @@ var weatherData;
             var card = $("<div class='card forecastCard'></div>");
             card.append("<h6>" + date + "</h6>");
             card.append("<p class='card-text'>" + "<img src=" + weatherIcon + "></img><br>Temp: " + temp + "°F<br>Humidity: " + humidity + "%</p>");
-            $("#5-day-forecast").append(card);
+            $("#five-day-forecast").append(card);
         }
     }
     function get(city) {
@@ -82,7 +82,7 @@ var weatherData;
                         uvDisplay.attr("style", "color:green;")
                     }
                     else if (uvData.current.uvi > 2 && uvData.current.uvi <= 5) {
-                        uvDisplay.attr("style", "color:oragne;")
+                        uvDisplay.attr("style", "color:orange;")
                     }
                     else if (uvData.current.uvi > 5 && uvData.current.uvi <= 7) {
                         uvDisplay.attr("style", "color:orange;")
@@ -121,7 +121,7 @@ var weatherData;
     function errForecast() {
         console.log("error");
     }
-        rander();
+        render();
 
     $("#button").on("click", function (event) {
         event.preventDefault();
