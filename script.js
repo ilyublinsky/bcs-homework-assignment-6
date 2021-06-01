@@ -4,7 +4,7 @@ var requestUrl = ('https://api.openweathermap.org/data/2.5/weather?id=');
 var city = $("");
 var search = $("#search-button");
 var date = $("");
-var temperature = $("#terperature");
+var temperature = $("#temperature");
 var icon = $("#weatherIcon");
 var windSpeed = $("#wind");
 var humidity = $("#humidity");
