@@ -3,7 +3,7 @@ var APIKEY = "5d5c7866dcc54075c141f06a9dea4f1b";
 var requestUrl = "https://api.openweathermap.org/data/2.5/weather";
 var queryURL = "https://api.openweathermap.org/data/2.5/forecast";
 
-var weatherData;
+var weatherData = "";
 
     function render() {
      $("#search").empty();
@@ -25,8 +25,8 @@ var weatherData;
         var dailyForecasts = hourlyUpdate.list.filter(forecast => forecast.dt_txt.includes('15:00:00'));
             $("#five-day-forecast").empty();
         for (var i = 0; i < dailyForecasts.length; i++) {
-            var date = new Date(forecast.dt_txt).toLocaleDateString();
             var forecast = dailyForecasts[i]
+            var date = new Date(forecast).toLocaleDateString();
             var weatherIcon = "http://openweathermap.org/img/w/" + forecast.weather[0].icon + ".png";
             var temp = forecast.main.temp;
             var humidity = forecast.main.humidity;
@@ -43,7 +43,7 @@ var weatherData;
             units: "imperial"
         };
         $.get(queryURL, req)
-            .done(data => success(data, city))
+            .done(data => forecast(data, city))
             .fail(err);
 
         $.get(requestUrl, req)
@@ -113,7 +113,7 @@ var weatherData;
 
         display();
         
-        if (!history.includes(city)) {
+        if (!weatherData.includes(city)) {
             addHistoryButton();
             storeHistory();
         }

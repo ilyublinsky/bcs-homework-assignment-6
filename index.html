@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <i class="wi-forecast-io-thunderstorm: thunderstorm"></i>
@@ -25,7 +25,7 @@
   <!--City Search Button Fuction-->
     <div class="container-fluid">
         <div class="row">
-            <aside class=" col-sm-3 sidebar">
+            <aside class=" col-sm-2 sidebar">
                 <h3>Search for a City:</h3>
                 <form class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Enter City Name" aria-label="Search City Name"
@@ -35,15 +35,17 @@
                                 class="fas fa-search"></i></button>
                     </div>
                 </form>
-                <ul class=" list-group" id="search">
-                </ul>
             </aside>
-            <div class="col-sm-9">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-6">
                 <div class="card current">
                     <h2>Current Weather</h2>
                     <div class="card-body" id="weather">
                     </div>
                 </div>
+                <br>
+                <br>
+                <hr>
                 <div class="card forecast">
                     <h2>Next 5 Days</h2>
                     <div class="card-body card-deck" id="five-day-forecast">
